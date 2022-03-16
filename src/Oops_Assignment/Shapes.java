@@ -3,7 +3,7 @@ package Oops_Assignment;
 class calArea{
 
     double calAreaI(double v) {
-        return 2 * 3.14 * v;
+        return 3.14 * v * v;
     }
 
     float calAreaI(float l, float b){
