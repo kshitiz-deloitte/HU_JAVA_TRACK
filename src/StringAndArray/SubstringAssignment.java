@@ -80,5 +80,3 @@ class SubstringAssignment{
 
     }
 }
-
-// This code is contributed by th_aditi
