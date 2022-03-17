@@ -11,8 +11,8 @@ public class Anagrams {
         Scanner sc = new Scanner(System.in);
         String str1 = sc.next();
         String str2 = sc.next();
-        char[] char1 = str1.toCharArray();
-        char[] char2 = str2.toCharArray();
+        char[] char1 = str1.toLowerCase().toCharArray();
+        char[] char2 = str2.toLowerCase().toCharArray();
         for(char i:char1){
             arr1.add(i);
         }
