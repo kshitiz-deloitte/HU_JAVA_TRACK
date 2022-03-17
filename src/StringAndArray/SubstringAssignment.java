@@ -18,9 +18,6 @@ class SubstringAssignment{
         {
             for(int j = 0; j <= N; j++)
             {
-
-                // Two empty strings have an
-                // empty strings as interleaving
                 if (i == 0 && j == 0)
                     bool[i][j] = true;
 
@@ -30,27 +27,21 @@ class SubstringAssignment{
                             s3.charAt(j - 1))
                         bool[i][j] = bool[i][j - 1];
                 }
-
                 else if (j == 0)
                 {
                     if (s1.charAt(i - 1) ==
                             s3.charAt(i - 1))
                         bool[i][j] = bool[i - 1][j];
                 }
-
-
                 else if (s1.charAt(i - 1) ==
                         s3.charAt(i + j - 1) &&
                         s2.charAt(j - 1) !=
                                 s3.charAt(i + j - 1))
                     bool[i][j] = bool[i - 1][j];
-
-
                 else if (s1.charAt(i - 1) !=
                         s3.charAt(i + j - 1) &&
                         s2.charAt(j - 1) == s3.charAt(i + j - 1))
                     bool[i][j] = bool[i][j - 1];
-
                 else if (s1.charAt(i - 1) ==
                         s3.charAt(i + j - 1) &&
                         s2.charAt(j - 1) ==
@@ -77,6 +68,5 @@ class SubstringAssignment{
         String s2 = sc.nextLine();
         String s3 = sc.nextLine();
         solution(s1, s2, s3);
-
     }
 }
